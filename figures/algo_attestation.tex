@@ -1,0 +1,15 @@
+\SetKwInput{KwForEach}{for each}
+\begin{algorithm}[h]
+    \caption{One-time Remote Attestation}
+    \KwIn{NULL}
+    $(PK_{CSP}, SK_{CSP}) \leftarrow sgx\_ecc256\_create\_key\_pair()$\;
+    Remote attestation to Intel service to verify $PK_{CSP}$'s authorization\;
+    \KwForEach{data analysis task}
+    \Begin{
+        $SK \leftarrow Dec(SK_{CSP},Enc_{SK})$\;
+        Establish a local attestation channel between EKeyMgr and EAnalyzer\;
+        Use $SK$\;
+    }
+    \KwRet{}\;
+\label{algo:attestation}
+\end{algorithm}

@@ -1,0 +1,38 @@
+\section{设计}
+
+\subsection{概述}
+本节简要概述Fidelius中使用的enclaves和符号，以及其架构和工作流程。
+
+\subsubsection{Enclaves和符号}
+在本文中，我们定义以下enclaves和符号：
+\begin{itemize}
+    \item EKeyMgr。Enclave密钥管理器管理非对称密钥，处理创建、删除并提供基本密码学功能，包括消息加密、解密、签名和签名验证。
+    \item EAnalyzer。Enclave分析器，一个Intel SGX Enclave格式的分析程序，确保程序在执行期间保持不变。
+    \item $(PK_{DP},SK_{DP})$，数据提供方的非对称密钥对。
+    \item $(PK_{DU},SK_{DU})$，数据使用方的非对称密钥对。
+    \item $(PK_{CSP}, SK_{CSP})$表示云服务提供方的非对称密钥对，由EKeyMgr生成。私钥$SK_{CSP}$安全地存储在enclave内，确保云服务提供商无法提取。
+    \item $H(\cdot)$表示哈希函数。
+    \item $Enc(PK, msg)$表示使用$PK$加密$msg$。
+    \item $Dec(SK, cipher)$表示使用$SK$解密$cipher$。
+    \item $Sign(SK, msg)$表示使用$SK$对$msg$进行签名。
+    \item $Verf(PK, msg, sig)$表示使用$PK$和$msg$验证$sig$。
+    \item $\mathcal{F}(SK, PK_{CSP}, H_{EA})$表示使用$PK_{CSP}$将$SK$转发到EKeyMgr的过程。在此上下文中，$SK$在EAnalyzer中使用，由$H_{EA}$标识。函数$\mathcal{F}(\cdot)$涉及$Sign(SK, concat(PK_{CSP}, H_{EA}))$和$Enc(PK_{CSP}, SK)$。
+\end{itemize}
+
+\subsubsection{架构和工作流程}
+
+Fidelius架构和数据分析工作流程如图所示。
+该过程从设置阶段开始，其中CSP中的EKeyMgr生成非对称密钥对。公钥$PK_{CSP}$通过Intel的远程认证服务进行验证，而私钥$SK_{CSP}$安全地存储在EKeyMgr内。同时，数据提供方（DP）和数据使用方（DU）各自生成自己的非对称密钥对，并保留这些密钥。此外，DP使用她的公钥$PK_{DP}$加密数据，并为DU的使用准备这些加密数据。
+
+DP将加密数据上传到CSP，并使用$\mathcal{F}(SK_{DP}, PK_{CSP}, H_{EA})$将她的私钥$SK_{DP}$转发给EKeyMgr。类似地，DU将分析程序上传到CSP，并使用相同的方法将她的私钥$SK_{DU}$转发给EKeyMgr。重要的是要注意，明文私钥（$SK_{DP}$和$SK_{DU}$）只能在EKeyMgr内解密。
+
+一旦分析程序、加密数据和私钥准备就绪，数据分析任务就开始了。首先根据隐私描述语言（PDL）定义的规则检查分析程序。任何未通过此检查的程序都会导致分析任务立即终止。随后，EAnalyzer加载并解密加密数据。然后验证解密数据的哈希值；如果与声称的哈希不匹配，EAnalyzer立即停止以防止处理被篡改或欺诈的数据。如果数据得到验证，EAnalyzer继续进行主要分析，最终使用$PK_{DU}$产生加密结果。此外，使用$SK_{DU}$对结果进行签名。由于$SK_{DU}$位于EKeyMgr内，EAnalyzer通过本地认证建立安全通道来请求$SK_{DU}$。
+
+\subsection{隐私描述语言}
+为了防止数据分析结果泄漏数据，我们提出了隐私描述语言来定义使用数据的规则，并通过了静态二进制分析的方法检查分析程序是否遵守隐私描述语言定义的规则。如图所示，这段代码使用PDL描述了在Iris数据集上使用Kmeans算法的规则，这段代码也将被转换成LLVM的中间表示，然后使用符号执行得到PDL描述的规则的状态a。另一方面，我们使用GTIRB作为分析的中间表示，在将分析程序转换为中间表示后，使用符号执行获取每个输出变量的状态b，并判断是否满足b包含于a。
+
+\subsection{可信和可验证的结果}
+算法概述了EKeyMgr和EAnalyzer的主要操作。在EAnalyzer内生成的加密分析结果及其签名被传输到区块链。在那里，任何人都可以验证签名的有效性。有效的签名确认DP成功执行了分析程序并获得了正确的结果，因为签名源自EAnalyzer内部。这种机制防止攻击者在未执行分析程序的情况下伪造有效签名，从而确保数据分析过程的完整性。DU可以从区块链下载加密结果，并使用$SK_{DU}$解密以获得明文分析结果。
+
+\subsection{一次性远程认证}
+我们实施一次性远程认证过程，从一开始就建立安全和可信的环境。在设置阶段，云服务提供商（CSP）通过与Intel认证服务进行远程认证来验证EKeyMgr生成的公钥$PK_{CSP}$的授权。这种彻底的验证确认了CSP凭据的完整性和合法性。一旦验证完成，CSP上的后续分析任务不再需要远程认证。DP和DU转发的私钥（$SK$）通过本地认证从EKeyMgr安全传输到EAnalyzer。 

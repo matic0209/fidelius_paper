@@ -1,0 +1,17 @@
+\section{Related Work}\label{sec:related}
+GXS~\cite{gxchain} operates as a blockchain-based data trading platform that records and facilitates transactions between buyers and sellers, who exchange data via private channels upon mutual agreement.
+AccountTrade~\cite{accounttrade} uses blockchain to pair analyzers with data providers and ensures ecosystem security through enforceable protocols and data indices that detect and penalize dishonest behaviors.
+Zhao et al.~\cite{zhao} developed a data trading system focused on provider privacy, employing ring signatures and double authentication to secure transactions and prevent unauthorized access.
+
+
+In data-sharing systems~\cite{dong2015secure,yue2017big,xia2017medshare}, Shen et al.~\cite{shen} develop a scheme that ensures data integrity and confidentiality.
+Zuo et al.~\cite{FG} introduce a system that efficiently safeguards and revokes sellers' secret keys using proxy re-encryption and key separation, enhancing data protection with attribute-based encryption.
+To mitigate malicious proxy involvement in data leaks, Guo et al.~\cite{APRE} present accountable proxy re-encryption (APRE), a framework that detects and addresses misuse of re-encryption keys, further validating its CPA security and accountability under the DBDH assumption.
+Deng et al.~\cite{IBET} formalize an identity-based encryption transformation (IBET) model for sharing encrypted data with additional recipients beyond the initial designation by the data owner.
+
+
+SDTE~\cite{dai2019sdte} introduces a blockchain-based data analysis platform where data providers encrypt and upload data to the blockchain. Data users select this data, form analysis contracts, and request services. Upon approval, providers send decryption keys to a trusted node via Intel SGX remote attestation, which then decrypts the data and runs the analysis in the Ethereum Virtual Machine (EVM) protected by Intel SGX, before uploading the results to a settlement contract.
+However, SDTE's encrypted data uploads exert significant storage demands on the blockchain, and running analysis as Ethereum smart contracts introduces performance challenges. Running complex algorithms like \textit{k}-NN on the EVM, as shown in Section~\ref{subsec:evm_cmp}, is often impractical due to the scale of data and complexity of tasks.
+
+
+PrivacyGuard~\cite{xiao2020privacyguard} mitigates the performance limitations of the Ethereum Virtual Machine (EVM) by transitioning on-chain analysis to off-chain Trusted Execution Environments (TEEs), allowing data providers to set policies that limit unauthorized data usage. However, it still encounters challenges with EVM performance. Similarly, Sterling~\cite{hynes2018demonstration} introduces a decentralized data market utilizing machine learning for data analysis but also places significant storage demands on the blockchain, like SDTE and PrivacyGuard. Moreover, privacy concerns or regulations may prevent the upload of sensitive data.

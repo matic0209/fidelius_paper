@@ -1,0 +1,35 @@
+
+\begin{figure*}[h]
+\centering
+{
+  \setlength{\tabcolsep}{0pt}
+  \begin{tabular}{cccc}
+\subfloat[epoch = 100]{
+  \scalebox{0.39}{
+  \begin{tikzpicture}
+    \input{figures/bar_epoch100.tex}
+\end{tikzpicture}}
+} &
+\subfloat[epoch = 200]{
+  \scalebox{0.39}{
+  \begin{tikzpicture}
+    \input{figures/bar_epoch200.tex}
+\end{tikzpicture}}
+} &
+\subfloat[epoch = 100]{
+  \scalebox{0.39}{
+  \begin{tikzpicture}
+    \input{figures/line_epoch100.tex}
+\end{tikzpicture}}
+} &
+\subfloat[epoch = 200]{
+  \scalebox{0.39}{
+  \begin{tikzpicture}
+    \input{figures/line_epoch200.tex}
+\end{tikzpicture}}
+} \\
+\end{tabular}
+}
+  \caption{\small Time Consumption and Accuracy of CPU-Intensive Task.}
+\label{fig:cpu_intensive}
+\end{figure*}

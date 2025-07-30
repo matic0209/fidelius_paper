@@ -1,0 +1,36 @@
+\section{背景}
+\subsection{Intel SGX}
+Intel Software Guard Extensions (SGX) 是一个硬件级别的可信执行环境，用于保护程序执行。它建立了一个安全的私有内存区域，称为Enclave Page Cache (EPC)，保护其内容免受外部进程的未授权访问或修改。这个指定的内存空间被认为是可信的，而超出它的任何区域都被视为不可信的，严格限制从不可信环境的访问。
+
+部署在EPC内的程序被称为enclave程序。Enclaves被设计为与不可信环境隔离运行，只能通过明确声明的方法进行交互，这些方法被称为ECALL或OCALL方法。
+
+我们将介绍封装在enclave内的关键方法和操作。
+\begin{itemize}
+\item $sgx\_get\_key()$: 此函数检索基于当前enclave哈希值、CPU ID和其他配置文件生成的对称密钥。每个enclave都有一个以这种方式生成的唯一对称密钥。除非声明特定的导出（OCALL）方法，否则对称密钥在enclave外部无法访问。
+\item $sgx\_ecc256\_create\_key\_pair()$: 此函数通过利用SGX的自包含随机数生成器生成ECC-256非对称密钥对。
+\end{itemize}
+
+为了安全地将私有消息从enclave存储到本地存储中，"seal"操作使用enclave的对称密钥加密消息，然后本地存储。这种方法确保密封消息的明文对用户不可访问，因为对称密钥保持未公开。
+为了解封消息，用户使用指定的（ECALL）方法将消息传输到enclave，enclave使用自己的对称密钥解密消息。
+
+\subsection{远程认证}
+远程认证是Intel SGX提供的一种技术，用于证明在未知平台上运行的enclave程序的完整性。目前，Intel SGX提供两种类型的远程认证：Intel Enhanced Privacy ID (Intel EPID) Attestation和Elliptic Curve Digital Signature Algorithm (ECDSA) Attestation。
+
+基于EPID的远程认证通常包括以下步骤。首先，应用程序enclave向同平台的quoting enclave发起请求，生成应用程序enclave的quote。其中，quoting enclave是Intel SGX官方提供的enclave。这两个enclave之间通过local attestation进行请求发送、quote传输，其中，local attestation仅为同一平台的两个enclave之间建立可信通道并进行数据传输。应用程序enclave在接收到quote之后，向远端的Intel Attestation Service发送，进行验证，得到验证的结果。
+
+EPID存在着诸多限制，例如，要求应用程序enclave所在的网络能够连接上Intel Attestation Service，要求Intel Attestation Service服务在任何时候都高可用（即不存在单点故障或者下线）。
+
+基于ECDSA的认证被引入以解决与EPID相关的限制。通过Intel SGX Data Center Attestation Primitives (DCAP)，基于ECDSA的认证使提供商能够建立并提供第三方认证服务，消除了对Intel提供的远程认证服务的依赖。
+
+Intel SGX DCAP允许第三方提供quoting enclave，并生成应用程序enclave的quote。其中，第三方quoting enclave使用的attestation key可由data center内部生成。attestation key的公钥将被发送至Intel's Provisioning Certification Enclave (PCE)并被签名/授权。在生成quote之后，quote会发送给data center内部的attestation service进行验证。
+
+SGX提供两种类型的enclave间通信：本地认证（LA）和远程认证（RA）。本地认证仅限于同一平台上的两个enclave，而远程认证促进跨平台通信。在本地认证期间，每个enclave可以验证交互enclave的哈希值或签名者。相比之下，远程认证需要可信的第三方，如Intel服务器或DCAP，来验证此信息。
+
+\subsection{区块链}
+\subsubsection{公链和联盟链}
+区块链分为公链和联盟链，公链所有人都可以访问，一个节点可以任意加入或者离开，没有任何权限控制。由于公链限制少，达成所有节点的共识就相对困难，导致其系统吞吐较低。公链最开始用于跨境支付，后发展成为去中心化金融的底层技术框架。联盟链顾名思义，由多个联盟成员组成，联盟成员一般为企业、机构、政府单位等。联盟链作为联盟成员中的可信第三方，具备公开、透明的特点，主要用于数据的公开存证、溯源、验证等。由于联盟链中的成员数量不多，可通过高效的共识算法使其达成一致，因此联盟链具备较高的吞吐性能。
+
+在Fidelius中，联盟链的利用作为可靠且容错的第三方实体，用于数据传输、数据存储等任务。相比之下，传统中介容易受到单点故障、数据篡改风险以及建立P2P私有网络的高成本影响。
+
+\subsubsection{智能合约}
+区块链的智能合约是链上程序，以其代码和执行过程的透明度而闻名。在Fidelius中，智能合约在验证云服务提供商提供的分析结果签名方面发挥着关键作用。一旦验证成功完成，数据分析的成功就得到保证，为所有相关方建立信任。 

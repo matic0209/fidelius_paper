@@ -1,0 +1,123 @@
+%\usepackage{xeCJK}
+
+%\ifStandaloneMode
+%\else
+%\usepackage{makecell}
+%\fi
+
+\usepackage{listings}
+%\usepackage{afterpage}
+\usepackage{multirow}
+%\usepackage{CJKfntef}
+%\usepackage[perpage,symbol*]{footmisc}
+\usepackage{tikz}
+\usepackage{tikzscale}
+
+\usepackage{pgfplots}
+\usepackage{fancyvrb}
+\usepackage{tabularx}
+\usepackage{color, colortbl}
+\usepackage[section]{placeins}
+\usepackage{alltt}
+\usepackage[linesnumbered, longend, ruled,vlined]{algorithm2e}
+\usepackage{algorithmic}
+\usepackage{subfig}
+\usepackage[draft]{tikzpeople}
+%\usepackage[ruled, linesnumbered]{algorithm2e}
+%\renewcommand{\algorithmcfname}{算法}
+
+%\usepackage{amsthm}
+
+
+
+
+
+
+
+% addpackages, by jpwu
+%\usepackage[squaren]{SIunits}
+\usepackage{float}
+%带圈的数字
+%\usepackage{pifont}
+%解决中文连字符左边有空格的问题
+%\normalspacedchars{-}
+
+
+\newenvironment{CenteredBox}{%
+\begin{Sbox}}{% Save the content in a box
+\end{Sbox}\centerline{\parbox{\wd\@Sbox}{\TheSbox}}}% And output it centered
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}@{\,}}
+\newcolumntype{T}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}@{}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newenvironment{mcode}{\begin{alltt}}{\end{alltt}}
+
+\ifdefined\StandaloneMode
+%nothing here
+\else
+\lstset{emph={long, bool, class, return, public, const, if, else, using, namespace, struct, for, int,char, typedef, void, double, float, static_cast, new},emphstyle=\color{blue}\sffamily, 					basicstyle=\ttfamily,
+  moredelim=[is][\color{red}]{^}{^}}
+
+\lstset{language=C++,
+                basicstyle=\ttfamily\footnotesize,
+                keywordstyle=\color{blue}\ttfamily\footnotesize,
+                stringstyle=\color{red}\ttfamily\footnotesize,
+                commentstyle=\color{green}\ttfamily\footnotesize,
+                morecomment=[l][\color{magenta}]{\#}
+}
+\lstset{%
+  escapeinside={(*}{*)},%
+}
+\fi
+
+%\newenvironment{CenteredBox}{%
+%\begin{Sbox}}{% Save the content in a box
+%\end{Sbox}\centerline{\parbox{\wd\@Sbox}{\TheSbox}}}% And output it centered
+
+
+\newcommand{\bh}[1]{\texttt{#1}}
+\newcommand{\cpp}[1]{\texttt{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\cat}[1]{{\it #1}}
+%\newcommand{\state}[1]{\textsf{#1}}
+\newcommand{\figfont}[1]{{\footnotesize #1}}
+\newcommand{\disscus}[1]{{\color{red}#1}}
+\newcommand{\msg}[1]{{\color{red}{\bf #1}}}
+
+\newcommand{\todo}[1]{{\color{blue}#1}}
+%\newtheorem{finding}{发现}
+
+\newcommand{\tbbpatch}{\textsc{P-TBB}}
+\newcommand{\name}{\textsc{FF}}
+\newcommand{\fname}{Function Flow}
+\newcommand{\sslink}{SSLink}
+\newcommand{\msusfont}[1]{{\textsl #1}}
+\newcommand{\msus}{\textsl{plbcr}}
+\newcommand{\exfigscale}{0.92}
+\newcommand{\cmfigscale}{0.5}
+
+
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\false}{\code{false}}
+\newcommand{\true}{\code{true}}
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\tmark}{\ding{66}}
+
+
+\definecolor{kwcolor}{rgb}{.5,.3,.0}
+\definecolor{fpcolor}{rgb}{.0,.3,.5}
+\newcommand{\kw}[1]{{\color{kwcolor}{#1}}}
+\newcommand{\fkw}[1]{{\kw{\figfont{#1}}}}
+\newcommand{\dexpr}{{\textmd{D-Expr}}}
+\newcommand{\type}[1]{\code{#1}}
+\newcommand{\method}[1]{\code{#1}}
+
+\newcommand{\fp}[1]{{\color{fpcolor} {#1}}}
+\newcommand{\fun}[1]{{\color{red} {#1}}}
+\newcommand{\task}[1]{\texttt{$#1$}}
+\newcommand{\fcode}[1]{\figfont{\texttt{#1}}}
+\newcommand{\bench}[1]{{\footnotesize{\textsf{#1}}}}
+
+\newsavebox{\codebox}

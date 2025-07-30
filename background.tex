@@ -1,0 +1,44 @@
+\section{Background}
+\subsection{Intel SGX}
+Intel Software Guard Extensions (SGX) is a hardware-level trusted execution environment that safeguards program execution. It establishes a secure, private memory region, called Enclave Page Cache (EPC), safeguarding its content from unauthorized access or modification by external processes. This designated memory space is considered trusted, while any region beyond it is deemed untrusted, strictly restricting access from untrusted environments.
+
+A program deployed within the EPC is referred to as an enclave program. Enclaves are designed to operate in isolation from untrusted environments and can only interact through explicitly declared methods, known as ECALL or OCALL methods.
+
+We will introduce the key methods and operations that are encapsulated within an enclave.
+\begin{itemize}
+\item $sgx\_get\_key()$: This function retrieves a symmetric key that is generated based on the hash of the current enclave, CPU ID, and other configuration files. Each enclave has a unique symmetric key generated in this manner. The symmetric key remains inaccessible from outside the enclave unless specific exporting (OCALL) methods are declared.
+\item $sgx\_ecc256\_create\_key\_pair()$: This function generates an ECC-256 asymmetric key pair by utilizing SGX's self-contained random number generator.
+\end{itemize}
+
+To securely store private messages from an enclave in local storage, the "seal" operation employs the enclave's symmetric key to encrypt the message and then stores it locally. This approach ensures that the plaintext of the sealed message remains inaccessible to users, as the symmetric key remains undisclosed.
+To unseal the message, users transmit the message to the enclave using a designated (ECALL) method, and the enclave decrypts the message using its own symmetric key.
+
+\subsection{Remote Attestation}
+% remote attestation是Intel提供的一种用于证明未知平台运行的enclave程序的integrity的技术。到目前为止，Intel支持的remote attestation的类型有两种：Intel Enhanced Privacy ID (Intel EPID) Attestation和Elliptic Curve Digital Signature Algorithm (ECDSA) Attestation。
+Remote attestation is a technology provided by Intel SGX to prove the integrity of enclave programs running on an unknown platform. Currently, Intel SGX provides two types of remote attestation: Intel Enhanced Privacy ID (Intel EPID) Attestation and Elliptic Curve Digital Signature Algorithm (ECDSA) Attestation.
+
+% 基于EPID的remote attestation一般包括如下步骤。首先，应用程序enclave向同平台的quoting enclave发起请求，生成应用程序enclave的quote。其中，quoting enclave是Intel SGX官方提供的enclave。这两个enclave之间通过local attestation进行请求发送、quote传输，其中，local attestation仅为同一平台的两个enclave之间建立可信通道并进行数据传输。应用程序enclave在接收到quote之后，向远端的Intel Attestation Service发送，进行验证，得到验证的结果。
+Remote attestation based on EPID typically involves the following steps. The application enclave initiates a request to the local quoting enclave (QE) provided by Intel SGX, generating a quote for the application enclave. These two enclaves use local attestation for request initiation and quote transmission, wherein local attestation establishes a trusted channel and enables data transfer between two enclaves on the same platform. After receiving the quote, the application enclave sends it to the remote Intel Attestation Service (IAS) for verification and obtains the verification result.
+% EPID存在着诸多限制，例如，要求应用程序enclave所在的网络能够连接上Intel Attestation Service，要求Intel Attestation Service服务在任何时候都高可用（即不存在单点故障或者下线）。
+EPID has several limitations, such as requiring that the network where the application enclave is located can connect to the Intel Attestation Service. It also demands that the Intel Attestation Service is highly available at all times, meaning there are no single points of failure or downtime.
+
+ECDSA-based Attestation was introduced to address the limitations associated with EPID. With Intel SGX Data Center Attestation Primitives (DCAP), ECDSA-based attestation enables providers to establish and offer a third-party attestation service, eliminating the need to rely on Intel's provided remote attestation service.
+% Intel SGX DCAP允许第三方提供quoting enclave，并生成应用程序enclave的quote。其中，第三方quoting enclave使用的attestation key可由data center内部生成。attestation key的公钥将被发送至Intel's Provisioning Certification Enclave (PCE)并被签名/授权。在生成quote之后，quote会发送给data center内部的attestation service进行验证。
+Intel SGX DCAP allows third parties to provide a quoting enclave and generate quotes for application enclaves. The attestation key used by the third-party quoting enclave can be generated internally within the data center. The public key of the attestation key is sent to Intel's Provisioning Certification Enclave (PCE) and signed/authorized. After generating the quote, it is sent to the data center's internal attestation service for verification.
+
+% SGX offers two types of communication between enclaves: local attestation (LA) and remote attestation (RA). Local attestation is limited to two enclaves on the same platform, while remote attestation facilitates cross-platform communication. During local attestation, each enclave can validate the hash value or the signer of the interacting enclave. In contrast, remote attestation requires a trusted third party, such as an Intel server or DCAP, to verify this information.
+
+\subsection{Blockchain}
+\subsubsection{Permissionless Chain and Permissioned Chain}
+% 区块链分为公链和联盟链，公链所有人都可以访问，一个节点可以任意加入或者离开，没有任何权限控制。由于公链限制少，达成所有节点的共识就相对困难，导致其系统吞吐较低。公链最开始用于跨境支付，后发展成为去中心化金融的底层技术框架。联盟链顾名思义，由多个联盟成员组成，联盟成员一般为企业、机构、政府单位等。联盟链作为联盟成员中的可信第三方，具备公开、透明的特点，主要用于数据的公开存证、溯源、验证等。由于联盟链中的成员数量不多，可通过高效的共识算法使其达成一致，因此联盟链具备较高的吞吐性能。
+Blockchain can be categorized into permissionless chains and permissioned chains. In permissionless chains, accessibility is open to everyone, and nodes can freely join or leave without any permission control. Due to the limited restrictions in permissionless chains, achieving consensus among all nodes can be relatively challenging, resulting in lower system throughput. Permissionless chains initially found application in cross-border payments and later evolved into the foundational technology framework for decentralized finance.
+
+Permissioned chains consist of multiple members, which are typically comprised of enterprises, institutions, government entities, and similar organizations. Permissioned chains serve as trusted third parties, offering characteristics of openness and transparency. They are primarily used for public data notarization, traceability, verification. Due to the smaller number of members in permissioned chains, efficient consensus algorithms can be employed to facilitate consensus among them, thereby endowing permissioned chains with higher throughput performance.
+
+In Fidelius, the utilization of permissioned blockchain serves as a reliable and fault-tolerant third-party entity for tasks like data transmission, data storage. In contrast, traditional mediators are susceptible to single point failures, data tampering risks, and the high costs associated with establishing P2P private networks.
+
+\subsubsection{Smart Contract}
+Blockchain's smart contracts are on-chain programs known for their transparency in code and execution processes. In Fidelius, smart contracts play a pivotal role in verifying the signature of the analysis results provided by cloud service providers. The success of a data analysis is assured once the verification is successfully completed, instilling trust in all parties involved.
+
+%\subsection{Binary Analysis}
+

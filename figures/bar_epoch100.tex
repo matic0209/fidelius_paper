@@ -1,0 +1,44 @@
+
+\begin{axis}[
+  compat=newest,
+  legend style={
+     legend columns=1,
+     font=\large,
+     legend pos=north west},
+  ybar,
+  bar width=12pt,
+  ymin=0,
+  ymax=1000,
+  xmin=0.3,
+  xmax=5.8,
+  scale only axis,
+  xticklabels={\bench{\large 1}, \bench{\large 2}, \bench{\large 3},
+    \bench{\large 4}, \bench{\large 5}
+  },
+  ylabel={Time (seconds)
+  },
+    xlabel=Number of training sets,
+    xtick=data,
+    width=0.5\textwidth,
+    height=0.36\textwidth,
+    every axis/.append style={font=\large,
+      label style={font=\large},
+      tick label style={font=\large}
+    }
+  ]
+\addplot [area legend] coordinates{
+  (1, 144.6828)
+  (2, 293.267)
+  (3, 447.979)
+  (4, 609.104)
+  (5, 758.237)
+};
+\addplot [fill=black!20,area legend] coordinates{
+  (1, 145.0)
+  (2, 298.95)
+  (3, 454.3)
+  (4, 612.15)
+  (5, 768.33)
+};
+\legend{[right]{Raw CPU}, [right]{Fidelius}}
+\end{axis}

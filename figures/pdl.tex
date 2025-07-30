@@ -1,0 +1,25 @@
+\begin{figure}[h]
+\centering
+\begin{lstlisting}
+import number;
+in = input user_type_t;
+iris = in.iris_data;
+sum(s1, s2) = {data: s1.data + s2.data, 
+    counter: s1.counter + s2.counter}
+sl = {data: iris.sepal_len, counter:number.one} |
+     sum(sl:s1, sl:s2);
+sw = {data:iris.sepal_wid, counter:number.one} |
+     sum(sw:s1, sw:s2) ;
+pl = {data:iris.petal_len, counter:number.one} |
+     sum(pl:s1, pl:s2) ;
+pw = {data:iris.petal_wid, counter:number.one} |
+     sum(pw:s1, pw:s2) ;
+osl = sl.data/sl.counter;
+osw = sw.data/sw.counter;
+opl = pl.data/pl.counter;
+opw = pw.data/pw.counter;
+output osl, osw, opl, opw, in.species
+\end{lstlisting}
+\caption{Utilization of PDL to Authorize KMeans Algorithm on the Iris Dataset}
+\label{fig:pdl}
+\end{figure}

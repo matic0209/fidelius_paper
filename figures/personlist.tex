@@ -1,0 +1,24 @@
+
+\begin{figure}[h]
+  \centering
+{
+\begin{tabular}{cc}
+      \subfloat[Data block size = 64 KBytes]{
+        \scalebox{0.39}{
+          \begin{tikzpicture}
+            \input{figures/data_block_64k.tex}
+          \end{tikzpicture}
+        }
+      } &
+      \subfloat[Data block size = 256 KBytes]{
+        \scalebox{0.39}{
+          \begin{tikzpicture}
+            \input{figures/data_block_256k.tex}
+          \end{tikzpicture}
+        }
+      }    \\
+\end{tabular}
+  }
+  \caption{\small Time Consumption of I/O-Intensive Task.}
+  \label{fig:io_intensive}
+\end{figure}
