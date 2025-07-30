@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{xeCJK}
+\usepackage{fontspec}
+\setCJKmainfont{SimSun}
+\setCJKsansfont{SimHei}
+\setCJKmonofont{FangSong}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=\textbullet}
+\setlist[enumerate]{label=\arabic*.}
+
+\begin{document}
+
+\section{测试Itemize环境}
+
+这是一个测试itemize环境的文档：
+
+\begin{itemize}
+    \item 第一个项目：测试中文显示
+    \item 第二个项目：测试数学公式 $x^2 + y^2 = z^2$
+    \item 第三个项目：测试特殊字符 $\digamma(x)$
+\end{itemize}
+
+\end{document} 

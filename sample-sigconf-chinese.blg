@@ -47,6 +47,8 @@ Warning--no number and no volume in li2021survey
 Warning--page numbers missing in both pages and numpages fields in li2021survey
 Warning--empty publisher in lu2021pegasus
 Warning--empty address in lu2021pegasus
+Warning--no number and no volume in nilsson2020survey
+Warning--page numbers missing in both pages and numpages fields in nilsson2020survey
 Warning--empty publisher in patra2021aby2
 Warning--empty address in patra2021aby2
 Warning--empty publisher in priebe2018enclavedb
@@ -59,45 +61,45 @@ Warning--empty publisher in xiao2020privacyguard
 Warning--empty address in xiao2020privacyguard
 Warning--empty publisher in yue2017big
 Warning--empty address in yue2017big
-You've used 37 entries,
+You've used 40 entries,
             6056 wiz_defined-function locations,
-            1702 strings with 26031 characters,
-and the built_in function-call counts, 46343 in all, are:
-= -- 6072
-> -- 1563
+            1719 strings with 26587 characters,
+and the built_in function-call counts, 49774 in all, are:
+= -- 6623
+> -- 1664
 < -- 0
-+ -- 541
-- -- 524
-* -- 3340
-:= -- 4353
-add.period$ -- 184
-call.type$ -- 37
-change.case$ -- 308
-chr.to.int$ -- 37
-cite$ -- 92
-duplicate$ -- 4039
-empty$ -- 2835
-format.name$ -- 652
-if$ -- 11546
++ -- 578
+- -- 554
+* -- 3572
+:= -- 4652
+add.period$ -- 199
+call.type$ -- 40
+change.case$ -- 329
+chr.to.int$ -- 40
+cite$ -- 97
+duplicate$ -- 4321
+empty$ -- 3033
+format.name$ -- 694
+if$ -- 12473
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 152
-newline$ -- 324
-num.names$ -- 245
-pop$ -- 1640
+missing$ -- 164
+newline$ -- 348
+num.names$ -- 266
+pop$ -- 1750
 preamble$ -- 1
-purify$ -- 604
+purify$ -- 649
 quote$ -- 0
-skip$ -- 1454
+skip$ -- 1550
 stack$ -- 0
-substring$ -- 3548
-swap$ -- 430
+substring$ -- 3776
+swap$ -- 460
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 815
-warning$ -- 47
-while$ -- 226
+type$ -- 863
+warning$ -- 49
+while$ -- 239
 width$ -- 0
-write$ -- 731
-(There were 47 warnings)
+write$ -- 787
+(There were 49 warnings)

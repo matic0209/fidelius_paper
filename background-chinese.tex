@@ -14,20 +14,23 @@ Intel软件保护扩展（SGX）是一个硬件级别的可信执行环境，用
 为了解封消息，用户使用指定的（ECALL）方法将消息传输到enclave，enclave使用自己的对称密钥解密消息。
 
 \subsection{远程认证}
+% remote attestation是Intel提供的一种用于证明未知平台运行的enclave程序的integrity的技术。到目前为止，Intel支持的remote attestation的类型有两种：Intel Enhanced Privacy ID (Intel EPID) Attestation和Elliptic Curve Digital Signature Algorithm (ECDSA) Attestation。
 远程认证是Intel SGX提供的一种技术，用于证明在未知平台上运行的enclave程序的完整性。目前，Intel SGX提供两种类型的远程认证：Intel增强隐私ID（Intel EPID）认证和椭圆曲线数字签名算法（ECDSA）认证。
 
+% 基于EPID的remote attestation一般包括如下步骤。首先，应用程序enclave向同平台的quoting enclave发起请求，生成应用程序enclave的quote。其中，quoting enclave是Intel SGX官方提供的enclave。这两个enclave之间通过local attestation进行请求发送、quote传输，其中，local attestation仅为同一平台的两个enclave之间建立可信通道并进行数据传输。应用程序enclave在接收到quote之后，向远端的Intel Attestation Service发送，进行验证，得到验证的结果。
 基于EPID的远程认证通常包括以下步骤。应用程序enclave向Intel SGX提供的本地引用enclave（QE）发起请求，生成应用程序enclave的引用。这两个enclave使用本地认证进行请求发起和引用传输，其中本地认证建立可信通道并实现同一平台上两个enclave之间的数据传输。接收到引用后，应用程序enclave将其发送到远程Intel认证服务（IAS）进行验证并获得验证结果。
-
+% EPID存在着诸多限制，例如，要求应用程序enclave所在的网络能够连接上Intel Attestation Service，要求Intel Attestation Service服务在任何时候都高可用（即不存在单点故障或者下线）。
 EPID存在一些限制，例如要求应用程序enclave所在的网络能够连接到Intel认证服务。它还要求Intel认证服务在任何时候都高可用，即不存在单点故障或停机。
 
-基于ECDSA的认证被引入以解决与EPID相关的限制。通过Intel SGX数据中心认证原语（DCAP），基于ECDSA的认证使提供商能够建立并提供第三方认证服务，消除对Intel提供的远程认证服务的依赖。
-
+ECDSA-based Attestation was introduced to address the limitations associated with EPID. With Intel SGX Data Center Attestation Primitives (DCAP), ECDSA-based attestation enables providers to establish and offer a third-party attestation service, eliminating the need to rely on Intel's provided remote attestation service.
+% Intel SGX DCAP允许第三方提供quoting enclave，并生成应用程序enclave的quote。其中，第三方quoting enclave使用的attestation key可由data center内部生成。attestation key的公钥将被发送至Intel's Provisioning Certification Enclave (PCE)并被签名/授权。在生成quote之后，quote会发送给data center内部的attestation service进行验证。
 Intel SGX DCAP允许第三方提供引用enclave并为应用程序enclave生成引用。第三方引用enclave使用的认证密钥可以在数据中心内部生成。认证密钥的公钥被发送到Intel的配置认证Enclave（PCE）并被签名/授权。生成引用后，它被发送到数据中心的内部认证服务进行验证。
 
-SGX提供两种类型的enclave间通信：本地认证（LA）和远程认证（RA）。本地认证仅限于同一平台上的两个enclave，而远程认证促进跨平台通信。在本地认证期间，每个enclave可以验证交互enclave的哈希值或签名者。相比之下，远程认证需要可信的第三方，如Intel服务器或DCAP，来验证此信息。
+% SGX offers two types of communication between enclaves: local attestation (LA) and remote attestation (RA). Local attestation is limited to two enclaves on the same platform, while remote attestation facilitates cross-platform communication. During local attestation, each enclave can validate the hash value or the signer of the interacting enclave. In contrast, remote attestation requires a trusted third party, such as an Intel server or DCAP, to verify this information.
 
 \subsection{区块链}
 \subsubsection{无许可链和有许可链}
+% 区块链分为公链和联盟链，公链所有人都可以访问，一个节点可以任意加入或者离开，没有任何权限控制。由于公链限制少，达成所有节点的共识就相对困难，导致其系统吞吐较低。公链最开始用于跨境支付，后发展成为去中心化金融的底层技术框架。联盟链顾名思义，由多个联盟成员组成，联盟成员一般为企业、机构、政府单位等。联盟链作为联盟成员中的可信第三方，具备公开、透明的特点，主要用于数据的公开存证、溯源、验证等。由于联盟链中的成员数量不多，可通过高效的共识算法使其达成一致，因此联盟链具备较高的吞吐性能。
 区块链可以分为无许可链和有许可链。在无许可链中，所有人都可以访问，节点可以自由加入或离开，没有任何权限控制。由于无许可链的限制较少，在所有节点之间达成共识可能相对困难，导致系统吞吐量较低。无许可链最初用于跨境支付，后来发展成为去中心化金融的基础技术框架。
 
 有许可链由多个成员组成，通常包括企业、机构、政府实体等类似组织。有许可链作为可信第三方，具有开放性和透明性的特点。它们主要用于公开数据公证、溯源、验证等。由于有许可链中的成员数量较少，可以采用高效的共识算法来促进它们之间的共识，从而使有许可链具有更高的吞吐性能。

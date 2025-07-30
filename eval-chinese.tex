@@ -21,7 +21,6 @@
 为了评估Fidelius在处理I/O密集型任务时的时间效率，我们在Fidelius和原始CPU平台上测试了一个在超过1 GB文件中搜索目标字符串的算法。时间消耗取决于数据加载和字符串搜索，Fidelius由于数据解密需要额外时间。考虑到Intel SGX在Fidelius中的约束，我们将数据加载块大小设置为64 KB和256 KB，并为每个块大小改变数据行数从1到128和1到256来测量时间效率。
 
 \input{figures/personlist.tex}
-
 图~\ref{fig:io_intensive}显示了Fidelius与原始CPU在不同数据块大小下的时间效率比较。随着读取行数的增加，Fidelius的时间消耗显著减少。例如，在64 KB块大小时，Fidelius的时间从81秒（1行）下降到11秒（128行）。类似地，在256 KB块大小时，从213秒（1行）减少到10秒（256行）。将块大小增加到256 KB进一步优化了Fidelius的性能。尽管有所改进，Fidelius与原始CPU之间的时间消耗仍存在差距，主要是由于I/O密集型任务中的解密过程。
 
 \subsection{性能比较}\label{subsec:evm_cmp}
@@ -30,5 +29,4 @@
 为了评估\textit{k}-NN算法在以太坊虚拟机（EVM）上的执行时间，我们在Ganache（个人以太坊区块链）上部署了\textit{k}-NN智能合约。报告的EVM上\textit{k}-NN的时间消耗仅关注执行时间，不包括交易广播或提交所花费的时间。我们还排除了将Titanic数据集上传到区块链所需的时间，因为\textit{k}-NN合约使用链上数据。由于EVM的内存限制，\textit{k}-NN算法无法处理超过60个测试集，因此我们将测试集限制在10-60个，同时保持训练集为100个。
 
 \input{figures/knn.tex}
-
 图~\ref{fig:knn_cmp}显示了\textit{k}-NN算法在原始CPU、Fidelius和以太坊虚拟机（EVM）上的时间消耗，后者比其他的大约长30倍。此外，由于内存约束，EVM执行在测试超过60个集时经常失败，突出了在EVM上运行具有大数据集的复杂机器学习算法的困难，正如之前关于以太坊内存限制的研究所指出的那样~\cite{dinh2017blockbench}。相比之下，Fidelius为复杂的机器学习任务提供了更可靠和稳定的环境。 
