@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.30)  30 JUL 2025 18:43
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.30)  30 JUL 2025 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2167,7 +2167,50 @@ Package: balance 1999/02/23 4.3 (PWD)
 \oldvsize=\dimen373
 )
 Excluding comment 'screenonly' Include comment 'printonly'
-Include comment 'anonsuppress' (./sample-sigconf-chinese.aux)
+Include comment 'anonsuppress' (./sample-sigconf-chinese.aux
+
+LaTeX Warning: Label `plot_raw' multiply defined.
+
+
+LaTeX Warning: Label `sub@plot_raw' multiply defined.
+
+
+LaTeX Warning: Label `plot_fid' multiply defined.
+
+
+LaTeX Warning: Label `sub@plot_fid' multiply defined.
+
+
+LaTeX Warning: Label `plot_raw' multiply defined.
+
+
+LaTeX Warning: Label `sub@plot_raw' multiply defined.
+
+
+LaTeX Warning: Label `plot_fid' multiply defined.
+
+
+LaTeX Warning: Label `sub@plot_fid' multiply defined.
+
+
+LaTeX Warning: Label `plot_raw' multiply defined.
+
+
+LaTeX Warning: Label `sub@plot_raw' multiply defined.
+
+
+LaTeX Warning: Label `plot_fid' multiply defined.
+
+
+LaTeX Warning: Label `sub@plot_fid' multiply defined.
+
+
+LaTeX Warning: Label `plot_raw' multiply defined.
+
+
+LaTeX Warning: Label `plot_fid' multiply defined.
+
+)
 \openout1 = `sample-sigconf-chinese.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 167.
@@ -2192,8 +2235,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 167.
 LaTeX Font Info:    ... okay on input line 167.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 167
 .
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 167
@@ -2452,12 +2494,23 @@ msg\T1/LinLibertine(0)/m/it/9 , \OML/cmm/m/it/9 signed[]\T1/LinLibertine(0)/m/i
 t/9 )$
  []
 
-) (./design-chinese.tex (./figures/framework.tex)
+) (./design-chinese.tex (./figures-chinese/framework.tex
+File: images/architecture.png Graphic file (type bmp)
+<images/architecture.png>
+
+
+Class acmart Warning: A possible image without description on input line 7.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [3.3]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
 Missing character: There is no ⋅ ("22C5) in font ec-lmr9!
 Missing character: There is no ϝ ("3DD) in font ec-lmr9!
 Missing character: There is no ϝ ("3DD) in font ec-lmr9!
@@ -2471,9 +2524,6 @@ L/cmm/m/it/9 concat\T1/LinLibertine(0)/m/it/9 (\OML/cmm/m/it/9 PK[]\T1/LinLiber
 tine(0)/m/it/9 , \OML/cmm/m/it/9 H[]\T1/LinLibertine(0)/m/it/9 ))$
  []
 
-
-LaTeX Warning: Reference `fig:arch' on page 4 undefined on input line 25.
-
 Missing character: There is no ϝ ("3DD) in font ec-lmr9!
 
 Overfull \hbox (1.95737pt too wide) in paragraph at lines 28--29
@@ -2483,39 +2533,89 @@ OML/cmm/m/it/9 SK[]\T1/LinLibertine(0)/m/it/9 , \OML/cmm/m/it/9 PK[]\T1/LinLibe
 rtine(0)/m/it/9 , \OML/cmm/m/it/9 H[]\T1/LinLibertine(0)/m/it/9 )$
  []
 
-(./figures/pdl.tex)
+(./figures-chinese/pdl.tex
 
-LaTeX Warning: Reference `fig:pdl' on page 4 undefined on input line 35.
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/BI" (it probably
+(fontspec)             doesn't exist).
 
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/I" (it probably
+(fontspec)             doesn't exist).
+
+LaTeX Font Info:    Trying to load font information for T1+inconsolata(0) on in
+put line 3.
+LaTeX Font Info:    No file T1inconsolata(0).fd. on input line 3.
+
+
+LaTeX Font Warning: Font shape `T1/inconsolata(0)/m/n' undefined
+(Font)              using `T1/lmr/m/n' instead on input line 3.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FangSong(0)' created for font 'FangSong'
+(fontspec)             with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
+
+
+Class acmart Warning: A possible image without description on input line 25.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
 Missing character: There is no ′ ("2032) in font ec-lmr6!
 Missing character: There is no ′ ("2032) in font ec-lmr6!
 
 
+(./figures-chinese/algo_EAnalyzer.tex
+Missing character: There is no ← ("2190) in font ec-lmr9!
+Missing character: There is no ← ("2190) in font ec-lmr9!
+Missing character: There is no ← ("2190) in font ec-lmr9!
+Missing character: There is no ← ("2190) in font ec-lmr9!
+Missing character: There is no ← ("2190) in font ec-lmr9!
+Missing character: There is no ≠ ("2260) in font ec-lmr9!
+Missing character: There is no ← ("2190) in font ec-lmr9!
+Missing character: There is no ← ("2190) in font ec-lmr9!
+Missing character: There is no ← ("2190) in font ec-lmr9!
 
-LaTeX Warning: Reference `algo:analysis_enclave' on page 4 undefined on input l
-ine 38.
+LaTeX Font Warning: Font shape `TU/SimSun(0)/m/it' undefined
+(Font)              using `TU/SimSun(0)/m/n' instead on input line 21.
 
-(./figures/algo_EAnalyzer.tex)
+)) (./eval-chinese.tex
 
-LaTeX Warning: Reference `algo:attestation' on page 4 undefined on input line 4
-3.
+[4.4] (./figures-chinese/algo_attestation.tex
+Missing character: There is no ← ("2190) in font ec-lmr9!
+Missing character: There is no ← ("2190) in font ec-lmr9!
+)
 
-) (./eval-chinese.tex (./figures/algo_attestation.tex) (./figures/mnist.tex
-(./figures/bar_epoch100.tex
+(./figures-chinese/mnist.tex (./figures-chinese/bar_epoch100.tex
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 44.
-) (./figures/bar_epoch200.tex)
-(./figures/line_epoch100.tex) (./figures/line_epoch200.tex)
+)
+(./figures-chinese/bar_epoch200.tex) (./figures-chinese/line_epoch100.tex)
+(./figures-chinese/line_epoch200.tex)
 
-Class acmart Warning: A possible image without description on input line 35.
+Class acmart Warning: A possible image without description on input line 34.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 
-[4.4] (./figures/personlist.tex (./figures/data_block_64k.tex)
-(./figures/data_block_256k.tex
+[5.5] (./figures-chinese/personlist.tex (./figures-chinese/data_block_64k.tex)
+(./figures-chinese/data_block_256k.tex
 Missing character: There is no 1 ("31) in font nullfont!
 Missing character: There is no 0 ("30) in font nullfont!
 Missing character: There is no . ("2E) in font nullfont!
@@ -2609,29 +2709,29 @@ Missing character: There is no . ("2E) in font nullfont!
 Missing character: There is no 3 ("33) in font nullfont!
 Missing character: There is no 6 ("36) in font nullfont!
 )
-Overfull \hbox (8.41737pt too wide) in paragraph at lines 5--22
+Overfull \hbox (8.41737pt too wide) in paragraph at lines 4--21
  [][] 
  []
 
 
-Class acmart Warning: A possible image without description on input line 24.
+Class acmart Warning: A possible image without description on input line 23.
 
 )
 
-(./figures/knn.tex
+(./figures-chinese/knn.tex
 
-Class acmart Warning: A possible image without description on input line 64.
+Class acmart Warning: A possible image without description on input line 68.
 
 )) (./related-chinese.tex
 
-[5.5]) (./conclusion-chinese.tex) (./sample-sigconf-chinese.bbl
+[6.6]) (./conclusion-chinese.tex) (./sample-sigconf-chinese.bbl
 Underfull \hbox (badness 2119) in paragraph at lines 110--117
 []\T1/LinLibertine(0)/m/it/7 Jean-Philippe Bossuat, Chris-tian Mouchet, Juan Tr
 oncoso-
  []
 
 
-Underfull \vbox (badness 6396) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -2641,11 +2741,8 @@ LaTeX Font Warning: Font shape `TS1/LinLibertine(0)/m/it' undefined
 (Font)              for symbol `textregistered' on input line 218.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-[6.6]
+[7.7]
 Underfull \hbox (badness 3965) in paragraph at lines 431--437
 []\T1/LinLibertine(0)/m/it/7 Chia-Che Tsai, Don-ald E Porter, and Mona Vij. 201
 7.
@@ -2675,7 +2772,7 @@ File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 (/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/se-utf32be.def
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 )
-[7.7] (./sample-sigconf-chinese.aux)
+[8.8] (./sample-sigconf-chinese.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
@@ -2685,19 +2782,19 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `sample-sigconf-chinese.out' has not changed.
 
-(rerunfilecheck)             Checksum: 3CE84FC6FD13F4FEC467ADD5627993B7;2326.
+(rerunfilecheck)             Checksum: 034973861B8B313C69396E6F45094BE0;2326.
  ) 
 Here is how much of TeX's memory you used:
- 60623 strings out of 473832
- 1405692 string characters out of 5729481
- 2088691 words of memory out of 5000000
- 82536 multiletter control sequences out of 15000+600000
- 592930 words of font info for 135 fonts, out of 8000000 for 9000
+ 60927 strings out of 473832
+ 1411074 string characters out of 5729481
+ 2096578 words of memory out of 5000000
+ 82828 multiletter control sequences out of 15000+600000
+ 592978 words of font info for 141 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
- 130i,27n,131p,1047b,32976s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 130i,27n,131p,1685b,32976s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on sample-sigconf-chinese.pdf (7 pages).
+Output written on sample-sigconf-chinese.pdf (8 pages).

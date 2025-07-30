@@ -3,7 +3,7 @@
 \subsection{概述}
 本节简要概述Fidelius中使用的enclaves和符号，以及其架构和工作流程。
 
-\input{figures/framework}
+\input{figures-chinese/framework}
 \subsubsection{Enclaves和符号}
 在本文中，我们定义以下enclaves和符号：
 \begin{itemize}
@@ -29,14 +29,14 @@ DP将加密数据上传到CSP，并使用$\digamma(SK_{DP}, PK_{CSP}, H_{EA})$�
 
 一旦分析程序、加密数据和私钥准备就绪，数据分析任务就开始了。首先根据隐私描述语言（PDL）定义的规则检查分析程序。任何未通过此检查的程序都会导致分析任务立即终止。随后，EAnalyzer加载并解密加密数据。然后验证解密数据的哈希值；如果与声称的哈希不匹配，EAnalyzer立即停止以防止处理被篡改或欺诈的数据。如果数据得到验证，EAnalyzer继续进行主要分析，最终使用$PK_{DU}$产生加密结果。此外，使用$SK_{DU}$对结果进行签名。由于$SK_{DU}$位于EKeyMgr内，EAnalyzer通过本地认证建立安全通道来请求$SK_{DU}$。
 
-\input{figures/pdl}
+\input{figures-chinese/pdl}
 \subsection{隐私描述语言}
 % 为了防止数据分析结果泄漏数据，我们提出了隐私描述语言来定义使用数据的规则，并通过了静态⼆进制分析的⽅法检查分析程序是否遵守隐私描述语言定义的规则。如图所示，这段代码使用PDL描述了在Iris数据集上使用Kmeans算法的规则，这段代码也将被转换成LLVM的中间表示，然后使用符号执行得到PDL描述的规则的状态a。另一方面，我们使用GTIRB作为分析的中间表⽰，在将分析程序转换为中间表⽰后，使⽤符号执⾏获取每个输出变量的状态b，并判断是否满足b包含于a。
 为了防止分析结果中的数据泄露，我们开发了一种隐私描述语言（PDL）来定义数据使用规则。使用静态二进制分析来确保分析程序遵循这些PDL定义的规则。如图~\ref{fig:pdl}所示，代码片段使用PDL来指定在Iris数据集上应用KMeans算法的规则。然后将此代码转换为LLVM的中间表示（IR），接着进行符号执行~\cite{king1976symbolic,baldoni2018survey}以得出PDL描述的状态$S$。同时，我们在分析中使用GTIRB~\cite{schulte2019gtirb}作为中间表示。将分析程序转换为此格式后，应用符号执行来获得每个输出变量的状态$S^{\prime}$，确保$S^{\prime}$是$S$的子集，从而确认合规性。
 
 \subsection{可信和可验证的结果}
 算法~\ref{algo:analysis_enclave}概述了EKeyMgr和EAnalyzer的主要操作。在EAnalyzer内生成的加密分析结果及其签名被传输到区块链。在那里，任何人都可以验证签名的有效性。有效的签名确认DP成功执行了分析程序并获得了正确的结果，因为签名源自EAnalyzer内部。这种机制防止攻击者在未执行分析程序的情况下伪造有效签名，从而确保数据分析过程的完整性。DU可以从区块链下载加密结果，并使用$SK_{DU}$解密以获得明文分析结果。
-\input{figures/algo_EAnalyzer}
+\input{figures-chinese/algo_EAnalyzer}
 
 \subsection{一次性远程认证}
 %We implement a one-time remote attestation as outlined in Algorithm~\ref{algo:attestation}. 

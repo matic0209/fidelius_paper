@@ -1,0 +1,23 @@
+\begin{figure}[h]
+  \centering
+{
+\begin{tabular}{cc}
+      \subfloat[数据块大小 = 64 KBytes]{
+        \scalebox{0.39}{
+          \begin{tikzpicture}
+            \input{figures-chinese/data_block_64k.tex}
+          \end{tikzpicture}
+        }
+      } &
+      \subfloat[数据块大小 = 256 KBytes]{
+        \scalebox{0.39}{
+          \begin{tikzpicture}
+            \input{figures-chinese/data_block_256k.tex}
+          \end{tikzpicture}
+        }
+      }    \\
+\end{tabular}
+  }
+  \caption{\small I/O密集型任务的时间消耗。}
+  \label{fig:io_intensive}
+\end{figure} 

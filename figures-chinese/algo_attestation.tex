@@ -1,0 +1,15 @@
+\SetKwInput{KwForEach}{for each}
+\begin{algorithm}[h]
+    \caption{一次性远程认证}
+    \KwIn{NULL}
+    $(PK_{CSP}, SK_{CSP}) \leftarrow sgx\_ecc256\_create\_key\_pair()$\;
+    向Intel服务进行远程认证以验证$PK_{CSP}$的授权\;
+    \KwForEach{数据分析任务}
+    \Begin{
+        $SK \leftarrow Dec(SK_{CSP},Enc_{SK})$\;
+        在EKeyMgr和EAnalyzer之间建立本地认证通道\;
+        使用$SK$\;
+    }
+    \KwRet{}\;
+\label{algo:attestation}
+\end{algorithm} 

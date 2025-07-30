@@ -1,6 +1,6 @@
 \SetKwInput{KwThrow}{throw}
 \begin{algorithm}[h]
-  \caption{Enclave KeyMgr and Analyzer}
+  \caption{Enclave密钥管理器和分析器}
   \KwIn{$Enc_{SK_{DP}}$, $Enc_{SK_{DU}}$, $Sig$, $Enc_{data}$, data\_hash}
 
   \tcc{EKeyMgr}
@@ -10,14 +10,14 @@
   \tcc{EAnalyzer}
   $PK_{DU} \leftarrow generate\_pkey\_from\_skey(SK_{DU})$\;
   $enclave\_hash \leftarrow get\_current\_enclave\_hash()$\;
-  \If{$!Verf(PK_{DU},concat(PK_{CSP},enclave\_hash),Sig)$}{\KwThrow{``Invalid EAnalyzer'';}}
+  \If{$!Verf(PK_{DU},concat(PK_{CSP},enclave\_hash),Sig)$}{\KwThrow{``无效的EAnalyzer'';}}
   $data \leftarrow Dec(SK_{DP},Enc_{data})$\;
-  \If{$H(data) \neq data\_hash$}{\KwThrow{``Invalid data'';}}
+  \If{$H(data) \neq data\_hash$}{\KwThrow{``无效数据'';}}
   $result \leftarrow do\_parse()$\;
   
   $Enc_{res} \leftarrow Enc(PK_{DU},result)$\;
   $Sig_{res} \leftarrow Sign(SK_{DU},result)$\;
   
-  \KwRet{$(Enc_{res}, Sig_{res})$ and sent to blockchain}\;
+  \KwRet{$(Enc_{res}, Sig_{res})$ 并发送到区块链}\;
 \label{algo:analysis_enclave}
-\end{algorithm}
+\end{algorithm} 
