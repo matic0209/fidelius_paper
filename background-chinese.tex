@@ -22,11 +22,11 @@ Intel软件保护扩展（SGX）是一个硬件级别的可信执行环境，用
 % EPID存在着诸多限制，例如，要求应用程序enclave所在的网络能够连接上Intel Attestation Service，要求Intel Attestation Service服务在任何时候都高可用（即不存在单点故障或者下线）。
 EPID存在一些限制，例如要求应用程序enclave所在的网络能够连接到Intel认证服务。它还要求Intel认证服务在任何时候都高可用，即不存在单点故障或停机。
 
-ECDSA-based Attestation was introduced to address the limitations associated with EPID. With Intel SGX Data Center Attestation Primitives (DCAP), ECDSA-based attestation enables providers to establish and offer a third-party attestation service, eliminating the need to rely on Intel's provided remote attestation service.
+基于ECDSA的认证被引入来解决与EPID相关的限制。通过Intel SGX数据中心认证原语（DCAP），基于ECDSA的认证使提供商能够建立并提供第三方认证服务，消除了对Intel提供的远程认证服务的依赖。
 % Intel SGX DCAP允许第三方提供quoting enclave，并生成应用程序enclave的quote。其中，第三方quoting enclave使用的attestation key可由data center内部生成。attestation key的公钥将被发送至Intel's Provisioning Certification Enclave (PCE)并被签名/授权。在生成quote之后，quote会发送给data center内部的attestation service进行验证。
 Intel SGX DCAP允许第三方提供引用enclave并为应用程序enclave生成引用。第三方引用enclave使用的认证密钥可以在数据中心内部生成。认证密钥的公钥被发送到Intel的配置认证Enclave（PCE）并被签名/授权。生成引用后，它被发送到数据中心的内部认证服务进行验证。
 
-% SGX offers two types of communication between enclaves: local attestation (LA) and remote attestation (RA). Local attestation is limited to two enclaves on the same platform, while remote attestation facilitates cross-platform communication. During local attestation, each enclave can validate the hash value or the signer of the interacting enclave. In contrast, remote attestation requires a trusted third party, such as an Intel server or DCAP, to verify this information.
+% SGX提供两种类型的enclave间通信：本地认证（LA）和远程认证（RA）。本地认证仅限于同一平台上的两个enclave，而远程认证促进跨平台通信。在本地认证期间，每个enclave可以验证交互enclave的哈希值或签名者。相比之下，远程认证需要可信第三方，如Intel服务器或DCAP，来验证此信息。
 
 \subsection{区块链}
 \subsubsection{无许可链和有许可链}
