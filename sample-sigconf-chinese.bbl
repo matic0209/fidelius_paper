@@ -1,0 +1,494 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{37}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[gxc(2018)]%
+        {gxchain}
+ \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{title}{{GXChain Foundation Ltd}}.
+\newblock \bibinfo{howpublished}{{[Online]. Available:
+  \url{https://static.gxchain.org/files/GXChain_WhitePaper_v3.0_CN.pdf}}}.
+\newblock
+
+
+\bibitem[mni(2020)]%
+        {mnist}
+ \bibinfo{year}{2020}\natexlab{}.
+\newblock \bibinfo{title}{{The MNIST Database}}.
+\newblock \bibinfo{howpublished}{{[Online]. Available:
+  \url{http://yann.lecun.com/exdb/mnist/}}}.
+\newblock
+
+
+\bibitem[Albright and Winston(2020)]%
+        {albright2020business}
+\bibfield{author}{\bibinfo{person}{S~Christian Albright} {and}
+  \bibinfo{person}{Wayne~L Winston}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Business analytics: Data analysis and
+  decision making}}.
+\newblock \bibinfo{publisher}{Cengage Learning, Inc.}
+\newblock
+
+
+\bibitem[Baldoni et~al\mbox{.}(2018)]%
+        {baldoni2018survey}
+\bibfield{author}{\bibinfo{person}{Roberto Baldoni}, \bibinfo{person}{Emilio
+  Coppa}, \bibinfo{person}{Daniele~Cono D’elia}, \bibinfo{person}{Camil
+  Demetrescu}, {and} \bibinfo{person}{Irene Finocchi}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{A survey of symbolic execution techniques}.
+\newblock \bibinfo{journal}{\emph{ACM Computing Surveys (CSUR)}}
+  \bibinfo{volume}{51}, \bibinfo{number}{3} (\bibinfo{year}{2018}),
+  \bibinfo{pages}{1--39}.
+\newblock
+
+
+\bibitem[Bonawitz et~al\mbox{.}(2017)]%
+        {bonawitz2017practical}
+\bibfield{author}{\bibinfo{person}{Keith Bonawitz}, \bibinfo{person}{Vladimir
+  Ivanov}, \bibinfo{person}{Ben Kreuter}, \bibinfo{person}{Antonio Marcedone},
+  \bibinfo{person}{H~Brendan McMahan}, \bibinfo{person}{Sarvar Patel},
+  \bibinfo{person}{Daniel Ramage}, \bibinfo{person}{Aaron Segal}, {and}
+  \bibinfo{person}{Karn Seth}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Practical secure aggregation for privacy-preserving
+  machine learning}. In \bibinfo{booktitle}{\emph{proceedings of the 2017 ACM
+  SIGSAC Conference on Computer and Communications Security}}.
+  \bibinfo{pages}{1175--1191}.
+\newblock
+
+
+\bibitem[Bossuat et~al\mbox{.}(2021)]%
+        {bossuat2021efficient}
+\bibfield{author}{\bibinfo{person}{Jean-Philippe Bossuat},
+  \bibinfo{person}{Christian Mouchet}, \bibinfo{person}{Juan
+  Troncoso-Pastoriza}, {and} \bibinfo{person}{Jean-Pierre Hubaux}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Efficient bootstrapping for approximate homomorphic
+  encryption with non-sparse keys}. In \bibinfo{booktitle}{\emph{Annual
+  International Conference on the Theory and Applications of Cryptographic
+  Techniques}}. Springer, \bibinfo{pages}{587--617}.
+\newblock
+
+
+\bibitem[Chen and Zhang(2022)]%
+        {chen2022mage}
+\bibfield{author}{\bibinfo{person}{Guoxing Chen} {and} \bibinfo{person}{Yinqian
+  Zhang}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{$\{$MAGE$\}$: Mutual Attestation for a Group of
+  Enclaves without Trusted Third Parties}. In \bibinfo{booktitle}{\emph{31st
+  USENIX Security Symposium (USENIX Security 22)}}.
+  \bibinfo{pages}{4095--4110}.
+\newblock
+
+
+\bibitem[Chen et~al\mbox{.}(2019)]%
+        {chen2019opera}
+\bibfield{author}{\bibinfo{person}{Guoxing Chen}, \bibinfo{person}{Yinqian
+  Zhang}, {and} \bibinfo{person}{Ten-Hwang Lai}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Opera: Open remote attestation for intel's secure
+  enclaves}. In \bibinfo{booktitle}{\emph{Proceedings of the 2019 ACM SIGSAC
+  Conference on Computer and Communications Security}}.
+  \bibinfo{pages}{2317--2331}.
+\newblock
+
+
+\bibitem[Dai et~al\mbox{.}(2019)]%
+        {dai2019sdte}
+\bibfield{author}{\bibinfo{person}{Weiqi Dai}, \bibinfo{person}{Chunkai Dai},
+  \bibinfo{person}{Kim-Kwang~Raymond Choo}, \bibinfo{person}{Changze Cui},
+  \bibinfo{person}{Deiqing Zou}, {and} \bibinfo{person}{Hai Jin}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{SDTE: A secure blockchain-based data trading
+  ecosystem}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Information Forensics
+  and Security}}  \bibinfo{volume}{15} (\bibinfo{year}{2019}),
+  \bibinfo{pages}{725--737}.
+\newblock
+
+
+\bibitem[Dalskov et~al\mbox{.}(2022)]%
+        {dalskov2022fast}
+\bibfield{author}{\bibinfo{person}{Anders Dalskov}, \bibinfo{person}{Daniel
+  Escudero}, {and} \bibinfo{person}{Ariel Nof}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Fast fully secure multi-party computation over any
+  ring with two-thirds honest majority}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2022 ACM SIGSAC Conference on
+  Computer and Communications Security}}. \bibinfo{pages}{653--666}.
+\newblock
+
+
+\bibitem[Deng et~al\mbox{.}(2020)]%
+        {IBET}
+\bibfield{author}{\bibinfo{person}{Hua Deng}, \bibinfo{person}{Zheng Qin},
+  \bibinfo{person}{Qianhong Wu}, \bibinfo{person}{Zhenyu Guan},
+  \bibinfo{person}{Robert~H. Deng}, \bibinfo{person}{Yujue Wang}, {and}
+  \bibinfo{person}{Yunya Zhou}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Identity-Based Encryption Transformation for
+  Flexible Sharing of Encrypted Data in Public Cloud}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Information Forensics
+  and Security}}  \bibinfo{volume}{15} (\bibinfo{year}{2020}),
+  \bibinfo{pages}{3168--3180}.
+\newblock
+\href{https://doi.org/10.1109/TIFS.2020.2985532}{doi:\nolinkurl{10.1109/TIFS.2020.2985532}}
+
+
+\bibitem[Dinh et~al\mbox{.}(2017)]%
+        {dinh2017blockbench}
+\bibfield{author}{\bibinfo{person}{Tien Tuan~Anh Dinh}, \bibinfo{person}{Ji
+  Wang}, \bibinfo{person}{Gang Chen}, \bibinfo{person}{Rui Liu},
+  \bibinfo{person}{Beng~Chin Ooi}, {and} \bibinfo{person}{Kian-Lee Tan}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Blockbench: A framework for analyzing private
+  blockchains}. In \bibinfo{booktitle}{\emph{Proceedings of the 2017 ACM
+  International Conference on Management of Data}}.
+  \bibinfo{pages}{1085--1100}.
+\newblock
+
+
+\bibitem[Dong et~al\mbox{.}(2015)]%
+        {dong2015secure}
+\bibfield{author}{\bibinfo{person}{Xinhua Dong}, \bibinfo{person}{Ruixuan Li},
+  \bibinfo{person}{Heng He}, \bibinfo{person}{Wanwan Zhou},
+  \bibinfo{person}{Zhengyuan Xue}, {and} \bibinfo{person}{Hao Wu}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Secure sensitive data sharing on a big data
+  platform}.
+\newblock \bibinfo{journal}{\emph{Tsinghua science and technology}}
+  \bibinfo{volume}{20}, \bibinfo{number}{1} (\bibinfo{year}{2015}),
+  \bibinfo{pages}{72--80}.
+\newblock
+
+
+\bibitem[Guo et~al\mbox{.}(2021)]%
+        {APRE}
+\bibfield{author}{\bibinfo{person}{Hui Guo}, \bibinfo{person}{Zhenfeng Zhang},
+  \bibinfo{person}{Jing Xu}, \bibinfo{person}{Ningyu An}, {and}
+  \bibinfo{person}{Xiao Lan}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Accountable Proxy Re-Encryption for Secure Data
+  Sharing}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Dependable and Secure
+  Computing}} \bibinfo{volume}{18}, \bibinfo{number}{1} (\bibinfo{year}{2021}),
+  \bibinfo{pages}{145--159}.
+\newblock
+\href{https://doi.org/10.1109/TDSC.2018.2877601}{doi:\nolinkurl{10.1109/TDSC.2018.2877601}}
+
+
+\bibitem[Hardin and Kotz(2022)]%
+        {hardin2022amanuensis}
+\bibfield{author}{\bibinfo{person}{Taylor Hardin} {and} \bibinfo{person}{David
+  Kotz}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Amanuensis: provenance, privacy, and permission in
+  TEE-enabled blockchain data systems}. In \bibinfo{booktitle}{\emph{2022 IEEE
+  42nd International Conference on Distributed Computing Systems (ICDCS)}}.
+  IEEE, \bibinfo{pages}{144--156}.
+\newblock
+
+
+\bibitem[Hynes et~al\mbox{.}(2018)]%
+        {hynes2018demonstration}
+\bibfield{author}{\bibinfo{person}{Nick Hynes}, \bibinfo{person}{David Dao},
+  \bibinfo{person}{David Yan}, \bibinfo{person}{Raymond Cheng}, {and}
+  \bibinfo{person}{Dawn Song}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{A demonstration of sterling: A privacy-preserving
+  data marketplace}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{11}, \bibinfo{number}{12} (\bibinfo{year}{2018}),
+  \bibinfo{pages}{2086--2089}.
+\newblock
+
+
+\bibitem[Jung et~al\mbox{.}(2017)]%
+        {accounttrade}
+\bibfield{author}{\bibinfo{person}{Taeho Jung}, \bibinfo{person}{Xiang-Yang
+  Li}, \bibinfo{person}{Wenchao Huang}, \bibinfo{person}{Jianwei Qian},
+  \bibinfo{person}{Linlin Chen}, \bibinfo{person}{Junze Han},
+  \bibinfo{person}{Jiahui Hou}, {and} \bibinfo{person}{Cheng Su}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Accounttrade: Accountable protocols for big data
+  trading against dishonest consumers}. In \bibinfo{booktitle}{\emph{IEEE
+  INFOCOM 2017-IEEE Conference on Computer Communications}}. IEEE,
+  \bibinfo{pages}{1--9}.
+\newblock
+
+
+\bibitem[King(1976)]%
+        {king1976symbolic}
+\bibfield{author}{\bibinfo{person}{James~C King}.}
+  \bibinfo{year}{1976}\natexlab{}.
+\newblock \showarticletitle{Symbolic execution and program testing}.
+\newblock \bibinfo{journal}{\emph{Commun. ACM}} \bibinfo{volume}{19},
+  \bibinfo{number}{7} (\bibinfo{year}{1976}), \bibinfo{pages}{385--394}.
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2021)]%
+        {li2021survey}
+\bibfield{author}{\bibinfo{person}{Qinbin Li}, \bibinfo{person}{Zeyi Wen},
+  \bibinfo{person}{Zhaomin Wu}, \bibinfo{person}{Sixu Hu},
+  \bibinfo{person}{Naibo Wang}, \bibinfo{person}{Yuan Li}, \bibinfo{person}{Xu
+  Liu}, {and} \bibinfo{person}{Bingsheng He}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{A survey on federated learning systems: Vision,
+  hype and reality for data privacy and protection}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Knowledge and Data
+  Engineering}} (\bibinfo{year}{2021}).
+\newblock
+
+
+\bibitem[Lindell(2020)]%
+        {lindell2020secure}
+\bibfield{author}{\bibinfo{person}{Yehuda Lindell}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Secure multiparty computation}.
+\newblock \bibinfo{journal}{\emph{Commun. ACM}} \bibinfo{volume}{64},
+  \bibinfo{number}{1} (\bibinfo{year}{2020}), \bibinfo{pages}{86--96}.
+\newblock
+
+
+\bibitem[Lu et~al\mbox{.}(2021)]%
+        {lu2021pegasus}
+\bibfield{author}{\bibinfo{person}{Wen-jie Lu}, \bibinfo{person}{Zhicong
+  Huang}, \bibinfo{person}{Cheng Hong}, \bibinfo{person}{Yiping Ma}, {and}
+  \bibinfo{person}{Hunter Qu}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{PEGASUS: bridging polynomial and non-polynomial
+  evaluations in homomorphic encryption}. In \bibinfo{booktitle}{\emph{2021
+  IEEE Symposium on Security and Privacy (SP)}}. IEEE,
+  \bibinfo{pages}{1057--1073}.
+\newblock
+
+
+\bibitem[Marcolla et~al\mbox{.}(2022)]%
+        {marcolla2022survey}
+\bibfield{author}{\bibinfo{person}{Chiara Marcolla}, \bibinfo{person}{Victor
+  Sucasas}, \bibinfo{person}{Marc Manzano}, \bibinfo{person}{Riccardo Bassoli},
+  \bibinfo{person}{Frank~HP Fitzek}, {and} \bibinfo{person}{Najwa Aaraj}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Survey on fully homomorphic encryption, theory, and
+  applications}.
+\newblock \bibinfo{journal}{\emph{Proc. IEEE}} \bibinfo{volume}{110},
+  \bibinfo{number}{10} (\bibinfo{year}{2022}), \bibinfo{pages}{1572--1609}.
+\newblock
+
+
+\bibitem[Patra et~al\mbox{.}(2021)]%
+        {patra2021aby2}
+\bibfield{author}{\bibinfo{person}{Arpita Patra}, \bibinfo{person}{Thomas
+  Schneider}, \bibinfo{person}{Ajith Suresh}, {and} \bibinfo{person}{Hossein
+  Yalame}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{$\{$ABY2. 0$\}$: Improved $\{$Mixed-Protocol$\}$
+  Secure $\{$Two-Party$\}$ Computation}. In \bibinfo{booktitle}{\emph{30th
+  USENIX Security Symposium (USENIX Security 21)}}.
+  \bibinfo{pages}{2165--2182}.
+\newblock
+
+
+\bibitem[Priebe et~al\mbox{.}(2018)]%
+        {priebe2018enclavedb}
+\bibfield{author}{\bibinfo{person}{Christian Priebe}, \bibinfo{person}{Kapil
+  Vaswani}, {and} \bibinfo{person}{Manuel Costa}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{EnclaveDB: A secure database using SGX}. In
+  \bibinfo{booktitle}{\emph{2018 IEEE Symposium on Security and Privacy (SP)}}.
+  IEEE, \bibinfo{pages}{264--278}.
+\newblock
+
+
+\bibitem[Purohit and Singh(2013)]%
+        {purohit2013data}
+\bibfield{author}{\bibinfo{person}{Bijayalaxmi Purohit} {and}
+  \bibinfo{person}{Pawan~Prakash Singh}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Data leakage analysis on cloud computing}.
+\newblock \bibinfo{journal}{\emph{International Journal of Engineering Research
+  and Applications}} \bibinfo{volume}{3}, \bibinfo{number}{3}
+  (\bibinfo{year}{2013}), \bibinfo{pages}{1311--1316}.
+\newblock
+
+
+\bibitem[Sandhu(2021)]%
+        {sandhu2021big}
+\bibfield{author}{\bibinfo{person}{Amanpreet~Kaur Sandhu}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Big data with cloud computing: Discussions and
+  challenges}.
+\newblock \bibinfo{journal}{\emph{Big Data Mining and Analytics}}
+  \bibinfo{volume}{5}, \bibinfo{number}{1} (\bibinfo{year}{2021}),
+  \bibinfo{pages}{32--40}.
+\newblock
+
+
+\bibitem[Schulte et~al\mbox{.}(2019)]%
+        {schulte2019gtirb}
+\bibfield{author}{\bibinfo{person}{Eric Schulte}, \bibinfo{person}{Jonathan
+  Dorn}, \bibinfo{person}{Antonio Flores-Montoya}, \bibinfo{person}{Aaron
+  Ballman}, {and} \bibinfo{person}{Tom Johnson}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{GTIRB: intermediate representation for binaries}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1907.02859}}
+  (\bibinfo{year}{2019}).
+\newblock
+
+
+\bibitem[Shayan et~al\mbox{.}(2020)]%
+        {shayan2020biscotti}
+\bibfield{author}{\bibinfo{person}{Muhammad Shayan}, \bibinfo{person}{Clement
+  Fung}, \bibinfo{person}{Chris~JM Yoon}, {and} \bibinfo{person}{Ivan
+  Beschastnikh}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Biscotti: A blockchain system for private and
+  secure federated learning}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Parallel and Distributed
+  Systems}} \bibinfo{volume}{32}, \bibinfo{number}{7} (\bibinfo{year}{2020}),
+  \bibinfo{pages}{1513--1525}.
+\newblock
+
+
+\bibitem[Shen et~al\mbox{.}(2018)]%
+        {shen}
+\bibfield{author}{\bibinfo{person}{Wenting Shen}, \bibinfo{person}{Jing Qin},
+  \bibinfo{person}{Jia Yu}, \bibinfo{person}{Rong Hao}, {and}
+  \bibinfo{person}{Jiankun Hu}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Enabling identity-based integrity auditing and data
+  sharing with sensitive information hiding for secure cloud storage}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Information Forensics
+  and Security}} \bibinfo{volume}{14}, \bibinfo{number}{2}
+  (\bibinfo{year}{2018}), \bibinfo{pages}{331--346}.
+\newblock
+
+
+\bibitem[Tsai et~al\mbox{.}(2017)]%
+        {tsai2017graphene}
+\bibfield{author}{\bibinfo{person}{Chia-Che Tsai}, \bibinfo{person}{Donald~E
+  Porter}, {and} \bibinfo{person}{Mona Vij}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{$\{$Graphene-SGX$\}$: A Practical Library
+  $\{$OS$\}$ for Unmodified Applications on $\{$SGX$\}$}. In
+  \bibinfo{booktitle}{\emph{2017 USENIX Annual Technical Conference (USENIX ATC
+  17)}}. \bibinfo{pages}{645--658}.
+\newblock
+
+
+\bibitem[Wang et~al\mbox{.}(2020)]%
+        {wang2020spds}
+\bibfield{author}{\bibinfo{person}{Yuntao Wang}, \bibinfo{person}{Zhou Su},
+  \bibinfo{person}{Ning Zhang}, \bibinfo{person}{Jianfei Chen},
+  \bibinfo{person}{Xin Sun}, \bibinfo{person}{Zhiyuan Ye}, {and}
+  \bibinfo{person}{Zhenyu Zhou}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{SPDS: A secure and auditable private data sharing
+  scheme for smart grid based on blockchain}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Industrial Informatics}}
+  \bibinfo{volume}{17}, \bibinfo{number}{11} (\bibinfo{year}{2020}),
+  \bibinfo{pages}{7688--7699}.
+\newblock
+
+
+\bibitem[Xia et~al\mbox{.}(2017)]%
+        {xia2017medshare}
+\bibfield{author}{\bibinfo{person}{QI Xia}, \bibinfo{person}{Emmanuel~Boateng
+  Sifah}, \bibinfo{person}{Kwame~Omono Asamoah}, \bibinfo{person}{Jianbin Gao},
+  \bibinfo{person}{Xiaojiang Du}, {and} \bibinfo{person}{Mohsen Guizani}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{MeDShare: Trust-less medical data sharing among
+  cloud service providers via blockchain}.
+\newblock \bibinfo{journal}{\emph{IEEE Access}}  \bibinfo{volume}{5}
+  (\bibinfo{year}{2017}), \bibinfo{pages}{14757--14767}.
+\newblock
+
+
+\bibitem[Xiao et~al\mbox{.}(2020)]%
+        {xiao2020privacyguard}
+\bibfield{author}{\bibinfo{person}{Yang Xiao}, \bibinfo{person}{Ning Zhang},
+  \bibinfo{person}{Jin Li}, \bibinfo{person}{Wenjing Lou}, {and}
+  \bibinfo{person}{Y~Thomas Hou}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Privacyguard: Enforcing private data usage control
+  with blockchain and attested off-chain contract execution}. In
+  \bibinfo{booktitle}{\emph{Computer Security--ESORICS 2020: 25th European
+  Symposium on Research in Computer Security, ESORICS 2020, Guildford, UK,
+  September 14--18, 2020, Proceedings, Part II 25}}. Springer,
+  \bibinfo{pages}{610--629}.
+\newblock
+
+
+\bibitem[Yue et~al\mbox{.}(2017)]%
+        {yue2017big}
+\bibfield{author}{\bibinfo{person}{Li Yue}, \bibinfo{person}{Huang Junqin},
+  \bibinfo{person}{Qin Shengzhi}, {and} \bibinfo{person}{Wang Ruijin}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Big data model of security sharing based on
+  blockchain}. In \bibinfo{booktitle}{\emph{2017 3rd International Conference
+  on Big Data Computing and Communications (BIGCOM)}}. IEEE,
+  \bibinfo{pages}{117--121}.
+\newblock
+
+
+\bibitem[Zhao et~al\mbox{.}(2019)]%
+        {zhao}
+\bibfield{author}{\bibinfo{person}{Yanqi Zhao}, \bibinfo{person}{Yong Yu},
+  \bibinfo{person}{Yannan Li}, \bibinfo{person}{Gang Han}, {and}
+  \bibinfo{person}{Xiaojiang Du}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Machine learning based privacy-preserving fair data
+  trading in big data market}.
+\newblock \bibinfo{journal}{\emph{Information Sciences}}  \bibinfo{volume}{478}
+  (\bibinfo{year}{2019}), \bibinfo{pages}{449--460}.
+\newblock
+
+
+\bibitem[Zheng et~al\mbox{.}(2021)]%
+        {zheng2021survey}
+\bibfield{author}{\bibinfo{person}{Wei Zheng}, \bibinfo{person}{Ying Wu},
+  \bibinfo{person}{Xiaoxue Wu}, \bibinfo{person}{Chen Feng},
+  \bibinfo{person}{Yulei Sui}, \bibinfo{person}{Xiapu Luo}, {and}
+  \bibinfo{person}{Yajin Zhou}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{A survey of Intel SGX and its applications}.
+\newblock \bibinfo{journal}{\emph{Frontiers of Computer Science}}
+  \bibinfo{volume}{15} (\bibinfo{year}{2021}), \bibinfo{pages}{1--15}.
+\newblock
+
+
+\bibitem[Zuo et~al\mbox{.}(2018)]%
+        {FG}
+\bibfield{author}{\bibinfo{person}{Cong Zuo}, \bibinfo{person}{Jun Shao},
+  \bibinfo{person}{Joseph~K. Liu}, \bibinfo{person}{Guiyi Wei}, {and}
+  \bibinfo{person}{Yun Ling}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Fine-Grained Two-Factor Protection Mechanism for
+  Data Sharing in Cloud Storage}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Information Forensics
+  and Security}} \bibinfo{volume}{13}, \bibinfo{number}{1}
+  (\bibinfo{year}{2018}), \bibinfo{pages}{186--196}.
+\newblock
+\href{https://doi.org/10.1109/TIFS.2017.2746000}{doi:\nolinkurl{10.1109/TIFS.2017.2746000}}
+
+
+\end{thebibliography}

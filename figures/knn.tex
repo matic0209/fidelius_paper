@@ -32,7 +32,7 @@
     (40,1.6076) %log10(40.51)
     (50,1.6771) %log10(47.54)
     (60,1.7350) %log10(54.32)
-}; \label{plot_raw}
+}; \addlegendentry{Raw CPU}
 
 \addplot[smooth,mark=square]
   coordinates{
@@ -42,7 +42,7 @@
     (40,1.6350) %log10(43.15)
     (50,1.7088) %log10(51.14)
     (60,1.7693) %log10(58.79)
-  }; \label{plot_fid}
+  }; \addlegendentry{Fidelius}
 
 \addplot[smooth,mark=triangle]
   coordinates{
@@ -52,12 +52,7 @@
     (40,3.1261) %log10(1337)
     (50,3.1976) %log10(1576)
     (60,3.2813) %log10(1911)
-  }; \label{plot_evm}
-
-
-  \addlegendimage{/pgfplots/refstyle=plot_raw}\addlegendentry[right]{Raw CPU}
-  \addlegendimage{/pgfplots/refstyle=plot_fid}\addlegendentry[right]{Fidelius}
-  \addlegendimage{/pgfplots/refstyle=plot_evm}\addlegendentry[right]{EVM}
+  }; \addlegendentry{EVM}
 
 \end{axis}
 \end{tikzpicture}

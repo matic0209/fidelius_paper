@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.30)  30 JUL 2025 18:07
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.30)  30 JUL 2025 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**sample-sigconf-chinese.tex
-(./sample-sigconf-chinese.tex
+**test-simple.tex
+(./test-simple.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (./acmart.cls
@@ -2157,8 +2157,8 @@ Package: balance 1999/02/23 4.3 (PWD)
 \oldvsize=\dimen372
 )
 Excluding comment 'screenonly' Include comment 'printonly'
-Include comment 'anonsuppress' (./sample-sigconf-chinese.aux)
-\openout1 = `sample-sigconf-chinese.aux'.
+Include comment 'anonsuppress' (./test-simple.aux)
+\openout1 = `test-simple.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
 LaTeX Font Info:    ... okay on input line 56.
@@ -2194,10 +2194,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package hyperref Info: Link coloring OFF on input line 56.
 
-(./sample-sigconf-chinese.out) (./sample-sigconf-chinese.out)
+(./test-simple.out) (./test-simple.out)
 \@outlinefile=\write6
-\openout6 = `sample-sigconf-chinese.out'.
+\openout6 = `test-simple.out'.
 
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -2382,316 +2385,34 @@ Overfull \hbox (6.56728pt too wide) in paragraph at lines 73--73
 d pri-vacy $$ Trusted com-put-ing; Privacy-preserving
  []
 
-(./intro-chinese.tex
 
 LaTeX Font Warning: Font shape `TU/SimSun(0)/b/n' undefined
-(Font)              using `TU/SimSun(0)/m/n' instead on input line 1.
+(Font)              using `TU/SimSun(0)/m/n' instead on input line 75.
 
 
+Class acmart Warning: A possible image without description on input line 116.
 
-File: images/analysis_2_roles.png Graphic file (type bmp)
-<images/analysis_2_roles.png>
-File: images/analysis_4_roles.png Graphic file (type bmp)
-<images/analysis_4_roles.png>
 
-Overfull \hbox (22.11153pt too wide) in paragraph at lines 25--40
+Overfull \hbox (35.22615pt too wide) in paragraph at lines 115--116
  [][] 
  []
 
 
-Class acmart Warning: A possible image without description on input line 42.
+Class acmart Warning: Some images may lack descriptions.
+
+
 
 
 
 [1.1
 
-]
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-) (./background-chinese.tex
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-
-Overfull \hbox (4.45076pt too wide) in paragraph at lines 10--11
-[]$\OML/cmm/m/it/9 sgx[]ecc\T1/latinmodern-math.otf(1)/m/n/9 256[]\OML/cmm/m/it
-/9 create[]key[]pair\T1/latinmodern-math.otf(1)/m/n/9 ()$: \TU/SimSun(0)/m/n/9 
-此 函 数 通 过 利 用 \T1/latinmodern-math.otf(1)/m/n/9 SGX
- []
-
-
-
-LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 27.
-LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 27.
-[2.2]
-LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 31.
-
-
-LaTeX Font Warning: Font shape `TU/SimHei(0)/m/it' undefined
-(Font)              using `TU/SimHei(0)/m/n' instead on input line 31.
-
-) (./overview-chinese.tex
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-
-
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-
-Overfull \hbox (16.00249pt too wide) in paragraph at lines 29--30
-\TU/SimSun(0)/m/n/9 而 言，|  我 们 的 签 名 包 含 \T1/LinLibertine(0)/m/it/9 nonce\TU/Si
-mSun(0)/m/n/9 ，|  确 保 有 效 的 签 名 对 $\T1/LinLibertine(0)/m/it/9 (\OML/cmm/m/it/9 
-msg\T1/LinLibertine(0)/m/it/9 , \OML/cmm/m/it/9 signed[]\T1/LinLibertine(0)/m/i
-t/9 )$
- []
-
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-) (./design-chinese.tex (./figures/framework.tex)
-Missing character: There is no • ("2022) in font ec-lmr9!
-
-
-[3.3]
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no ⋅ ("22C5) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no ⋅ ("22C5) in font ec-lmr9!
-
-Overfull \hbox (59.80722pt too wide) in paragraph at lines 20--21
-\TU/SimSun(0)/m/n/9 中 使 用，|  由 $\OML/cmm/m/it/9 H[]$ \TU/SimSun(0)/m/n/9 标 识。| 
- 函 数 $\OML/cmm/m/it/9 F\T1/LinLibertine(0)/m/it/9 ()$ \TU/SimSun(0)/m/n/9 涉 及 $
-\OML/cmm/m/it/9 Sign\T1/LinLibertine(0)/m/it/9 (\OML/cmm/m/it/9 SK\T1/LinLibert
-ine(0)/m/it/9 , \OML/cmm/m/it/9 concat\T1/LinLibertine(0)/m/it/9 (\OML/cmm/m/it
-/9 PK[]\T1/LinLibertine(0)/m/it/9 , \OML/cmm/m/it/9 H[]\T1/LinLibertine(0)/m/it
-/9 ))$
- []
-
-
-LaTeX Warning: Reference `fig:arch' on page 4 undefined on input line 25.
-
-
-Overfull \hbox (9.14828pt too wide) in paragraph at lines 28--29
-[]\T1/LinLibertine(0)/m/it/9 DP \TU/SimSun(0)/m/n/9 将 加 密 数 据 上 传 到 \T1/LinLibe
-rtine(0)/m/it/9 CSP\TU/SimSun(0)/m/n/9 ，|  并 使 用 $\OML/cmm/m/it/9 F\T1/LinLiber
-tine(0)/m/it/9 (\OML/cmm/m/it/9 SK[]\T1/LinLibertine(0)/m/it/9 , \OML/cmm/m/it/
-9 PK[]\T1/LinLibertine(0)/m/it/9 , \OML/cmm/m/it/9 H[]\T1/LinLibertine(0)/m/it/
-9 )$
- []
-
-(./figures/pdl.tex)
-
-LaTeX Warning: Reference `fig:pdl' on page 4 undefined on input line 34.
-
-Missing character: There is no ′ ("2032) in font ec-lmr6!
-Missing character: There is no ′ ("2032) in font ec-lmr6!
-
-LaTeX Warning: Reference `algo:analysis_enclave' on page 4 undefined on input l
-ine 37.
-
-(./figures/algo_EAnalyzer.tex)
-
-
-LaTeX Warning: Reference `algo:attestation' on page 4 undefined on input line 4
-1.
-
-) (./eval-chinese.tex (./figures/algo_attestation.tex)
-Missing character: There is no • ("2022) in font ec-lmr9!
-Missing character: There is no • ("2022) in font ec-lmr9!
-(./figures/mnist.tex (./figures/bar_epoch100.tex
-LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 44.
-) (./figures/bar_epoch200.tex)
-(./figures/line_epoch100.tex) (./figures/line_epoch200.tex)
-
-Class acmart Warning: A possible image without description on input line 35.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-)
-Underfull \vbox (badness 1297) has occurred while \output is active []
-
-
-
-[4.4] (./figures/personlist.tex (./figures/data_block_64k.tex)
-(./figures/data_block_256k.tex
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 5 ("35) in font nullfont!
-Missing character: There is no 2 ("32) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 3 ("33) in font nullfont!
-Missing character: There is no 2 ("32) in font nullfont!
-Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 7 ("37) in font nullfont!
-Missing character: There is no 8 ("38) in font nullfont!
-Missing character: There is no 4 ("34) in font nullfont!
-Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no 8 ("38) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no 4 ("34) in font nullfont!
-Missing character: There is no 8 ("38) in font nullfont!
-Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 5 ("35) in font nullfont!
-Missing character: There is no 8 ("38) in font nullfont!
-Missing character: There is no 3 ("33) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 2 ("32) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 5 ("35) in font nullfont!
-Missing character: There is no 8 ("38) in font nullfont!
-Missing character: There is no 2 ("32) in font nullfont!
-Missing character: There is no 3 ("33) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no 3 ("33) in font nullfont!
-Missing character: There is no 2 ("32) in font nullfont!
-Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 8 ("38) in font nullfont!
-Missing character: There is no 5 ("35) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no 4 ("34) in font nullfont!
-Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 5 ("35) in font nullfont!
-Missing character: There is no 9 ("39) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 3 ("33) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 7 ("37) in font nullfont!
-Missing character: There is no 9 ("39) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 2 ("32) in font nullfont!
-Missing character: There is no 8 ("38) in font nullfont!
-Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 2 ("32) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 5 ("35) in font nullfont!
-Missing character: There is no 2 ("32) in font nullfont!
-Missing character: There is no 5 ("35) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 5 ("35) in font nullfont!
-Missing character: There is no 9 ("39) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no . ("2E) in font nullfont!
-Missing character: There is no 3 ("33) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
-)
-Overfull \hbox (8.41737pt too wide) in paragraph at lines 5--22
- [][] 
- []
-
-
-Class acmart Warning: A possible image without description on input line 24.
-
-)
-
-(./figures/knn.tex
-
-Class acmart Warning: A possible image without description on input line 64.
-
-)) (./related-chinese.tex
-
-[5.5]) (./conclusion-chinese.tex) (./sample-sigconf-chinese.bbl
-Underfull \hbox (badness 2119) in paragraph at lines 98--105
-[]\T1/LinLibertine(0)/m/it/7 Jean-Philippe Bossuat, Chris-tian Mouchet, Juan Tr
-oncoso-
- []
-
-
-Underfull \vbox (badness 2073) has occurred while \output is active []
-
-
-
-
-Underfull \hbox (badness 3965) in paragraph at lines 395--401
-[]\T1/LinLibertine(0)/m/it/7 Chia-Che Tsai, Don-ald E Porter, and Mona Vij. 201
-7.
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[6.6])
-
-Class acmart Warning: Some images may lack descriptions.
-
-
-Class acmart Warning: ACM reference format is mandatory 
-(acmart)              for papers over one page. 
-(acmart)              Please add printacmref=true to the 
-(acmart)              \settopmatter command..
-
-
-
-
-
-(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
+] (/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/se-utf32be.def
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 )
-[7.7] (./sample-sigconf-chinese.aux)
+[2.1] (./test-simple.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
@@ -2701,19 +2422,27 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: File `sample-sigconf-chinese.out' has not changed.
 
-(rerunfilecheck)             Checksum: 3CE84FC6FD13F4FEC467ADD5627993B7;2326.
+LaTeX Warning: Temporary extra page added at the end. Rerun to get it removed.
+
+
+Package rerunfilecheck Warning: File `test-simple.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `test-simple.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  D1993FEE9E839444696E51001CA8D02C;156.
  ) 
 Here is how much of TeX's memory you used:
- 60283 strings out of 473832
- 1399765 string characters out of 5729481
- 2081977 words of memory out of 5000000
- 82200 multiletter control sequences out of 15000+600000
- 592930 words of font info for 135 fonts, out of 8000000 for 9000
+ 59661 strings out of 473832
+ 1380926 string characters out of 5729481
+ 1998507 words of memory out of 5000000
+ 81655 multiletter control sequences out of 15000+600000
+ 589874 words of font info for 126 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
- 130i,27n,131p,887b,32976s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 105i,17n,131p,876b,32898s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on sample-sigconf-chinese.pdf (7 pages).
+Output written on test-simple.pdf (2 pages).

@@ -29,7 +29,7 @@
     (32,2.7782) %log10(600)
     (64,2.7709) %log10(590)
     (128,2.7782) %log10(600)
-}; \label{plot_raw}
+}; \addlegendentry{Raw CPU}
 
 \addplot[smooth,mark=square]
   coordinates{
@@ -41,11 +41,6 @@
     (32,4.1065) %log10(12780)
     (64,4.0711) %log10(11780)
     (128,4.0481) %log10(11170)
-  }; \label{plot_fid}
-
-
-
-  \addlegendimage{/pgfplots/refstyle=plot_raw}\addlegendentry[right]{Raw CPU}
-  \addlegendimage{/pgfplots/refstyle=plot_fid}\addlegendentry[right]{Fidelius}
+  }; \addlegendentry{Fidelius}
 
 \end{axis}
